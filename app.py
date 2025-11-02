@@ -403,7 +403,11 @@ if run_button:
                 st.download_button("Download best-model predictions (CSV)", data=csv_bytes, file_name=f"improved_best_model_{best_col}.csv", mime='text/csv')
     
 
-    # ------------------ Credits (highlight) ------------------
+
+
+else:
+    st.write("Configure inputs on the sidebar and click 'Run (process file)' to execute the pipeline.")
+# ------------------ Credits (highlight) ------------------
     st.markdown(
     """
     <div style="margin-top:18px; padding:12px; border-radius:10px; background: linear-gradient(90deg,#fffaf0,#f0fbff); box-shadow: 0 2px 6px rgba(0,0,0,0.06); font-size:16px;">
@@ -413,7 +417,3 @@ if run_button:
     """,
     unsafe_allow_html=True
 )
-
-
-else:
-    st.write("Configure inputs on the sidebar and click 'Run (process file)' to execute the pipeline.")
