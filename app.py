@@ -407,7 +407,6 @@ if run_button:
 
 else:
     st.write("Configure inputs on the sidebar and click 'Run (process file)' to execute the pipeline.")
-# ------------------ Credits (highlight) ------------------
     st.markdown(
     """
     <div style="margin-top:18px; padding:12px; border-radius:10px; background: linear-gradient(90deg,#fffaf0,#f0fbff); box-shadow: 0 2px 6px rgba(0,0,0,0.06); font-size:16px;">
