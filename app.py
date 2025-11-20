@@ -22,6 +22,7 @@ st.markdown(
 )
 
 
+
 # ----------------- Utility functions (adapted from previous steps) -----------------
 def detect_columns(df):
     def find_col(keywords):
@@ -403,9 +404,19 @@ if run_button:
                 st.download_button("Download best-model predictions (CSV)", data=csv_bytes, file_name=f"improved_best_model_{best_col}.csv", mime='text/csv')
     
 
+    # ------------------ Credits (highlight) ------------------
+   
 
 
 else:
     st.write("Configure inputs on the sidebar and click 'Run (process file)' to execute the pipeline.")
+st.markdown(
+    """
+    <div style="margin-top:18px; padding:12px; border-radius:10px; background: linear-gradient(90deg,#fffaf0,#f0fbff); box-shadow: 0 2px 6px rgba(0,0,0,0.06); font-size:16px;">
+      <strong style="font-size:18px;">Credits:</strong> Made under supervision and support of
+      <span style="font-size:18px; font-weight:800; color:#b22222; background: rgba(255,230,230,0.6); padding:4px 8px; border-radius:6px;">Dr. Geetanjali Chauhan</span>
+    </div>
+    """,
     unsafe_allow_html=True
-)
+)    
+    
