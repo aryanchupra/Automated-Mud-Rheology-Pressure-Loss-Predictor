@@ -1,4 +1,3 @@
-# streamlit_step5_dashboard.py
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,9 +20,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-
-# ----------------- Utility functions (adapted from previous steps) -----------------
 def detect_columns(df):
     def find_col(keywords):
         for c in df.columns:
@@ -403,11 +399,6 @@ if run_button:
                 csv_bytes = df_show.to_csv(index=False).encode('utf-8')
                 st.download_button("Download best-model predictions (CSV)", data=csv_bytes, file_name=f"improved_best_model_{best_col}.csv", mime='text/csv')
     
-
-    # ------------------ Credits (highlight) ------------------
-   
-
-
 else:
     st.write("Configure inputs on the sidebar and click 'Run (process file)' to execute the pipeline.")
    
